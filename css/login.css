@@ -1,0 +1,224 @@
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+    }
+    body {
+        background-color:  rgb(223, 223, 223);
+    }
+    .nav_bar {
+        background-color: white;
+        color: black;
+        top: 0;
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0.4%;
+        border-bottom: 2px solid white;
+       background-color: rgb(42, 75, 43);
+       color:white;
+    }
+    a img {
+        height: 2%;
+        width: 8%;
+        border-radius: 100%;
+        margin:0 1% 0 2%;
+    }
+    a h1{
+        font-size: 2.1vw;
+        text-decoration: none;
+        color: white;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+        font-family: 'Satisfy';
+        text-decoration: underline;
+    }
+    a h1:hover{
+        color:rgb(212, 84, 24);
+        transition: 0.4s ease-in;
+    }
+    .nav_bar p{
+        font-size: 2vw;
+        position: absolute;
+        right: 4%;
+    } 
+    .nav_bar a:hover{
+        opacity: 0.9;
+        transition: 0.4s ease-in;
+    }
+    .side_bar a{
+        display: flex;
+        align-items: center;
+        width:80%;
+    }
+    .container{
+        background-color: white;
+        height: auto;
+        width:50%;
+        margin:10% auto 10% auto; 
+        padding:1.5%;
+        border-radius: 10px;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+    }
+    .search img{
+        width:20%;
+        border-radius: 100%;
+        border: 2px solid grey;
+        display: flex;
+        margin: auto auto 2% auto;
+    }
+    .search input{
+        display: flex;
+        margin: auto auto 2% auto;
+    }
+    .search a{
+        color: white;
+        text-decoration: none;
+        width: 20%;
+        margin: auto auto 1% auto;
+        font-size: 1.8vw;
+        padding: 1%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .register p,.search p{
+        text-align: center;
+        text-decoration: underline;
+        font-size: 1.8vw;
+        margin:0 0 2% 0;
+    }
+    input{
+        padding:2%;
+        font-size: 1.5vw;
+        border-radius: 10px;
+        border: 1px solid grey;
+    }
+    .login a{
+        text-decoration: none;
+        color:white;
+        font-size: 1.5vw;
+        background-color: rgb(42, 123, 230);
+        padding: 1.3%;
+        border-radius: 10px;
+        margin: 0 0 0 1.5%;
+        width: 20%;
+        text-align: center;
+    }
+    .login_container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    #login{
+        background-color: #bad79f;
+        color:rgb(42, 75, 43);
+        font-weight: bold;
+        border: 1px solid rgb(42, 75, 43);
+    }
+    #login:hover{
+        background-color: white;
+       
+        transition: 0.4s ease-in;
+    }
+    .login a:hover{
+        opacity: 0.8;
+        transition: 0.4s ease-in;
+    }
+    .login{
+        display: flex;
+        align-items: center;
+    }
+    *:focus {
+    outline: none;
+}
+.login input[type="file"] {
+    display: inline-block;
+    width: 30%;
+    margin: 0;
+}
+#upload-file{
+    font-size: 1.3vw;
+}
+.search{
+    display: none;
+}
+#size{
+    margin: 0 0 0 55%;
+    color:rgb(189, 21, 21);
+    font-size: 1.3vw;
+    white-space: nowrap;
+}
+.error_msg
+{
+    text-align: center;
+    font-size: 1.5vw;
+    width: 40%;
+    margin:1% auto 1% auto;
+    color:red;
+    display: none;
+    border-radius: 5px;
+    border: 1px solid red;
+    box-shadow: red 0 0 5px;
+}
+@media screen and (max-width:900px) {
+        .register p{
+            font-size: 3vw;
+        }
+        .nav_bar p{
+            font-size: 4vw;
+            white-space: nowrap;
+        }
+        a img{
+            width:10%;
+        }
+        .container{
+            margin: 40% auto 40% auto;
+            width:90%;
+        }
+        #upload-file,.error_msg{
+            font-size: 2.3vw;
+        }
+        #size{
+            font-size: 2vw;
+        }
+        input{
+            font-size: 3vw;
+        }
+        .login a,.search a{
+            font-size: 3vw;
+        }
+        a h1{
+            font-size: 5vw;
+        }
+    }
+    @media screen and (max-width:450px) {
+        .register p{
+            font-size: 5vw;
+        }
+        .search img{
+            width: 30%;
+        }
+        input{
+            font-size: 4vw;
+        }
+        .error_msg{
+            font-size: 3vw;
+        }
+        .login a,.search a{
+            font-size: 4vw;
+            width:30%;
+        }
+        a h1{
+            font-size: 4vw;
+        }
+        #size{
+            font-size: 2.5vw;
+            margin: 0 0 0 55%;
+        }
+    }

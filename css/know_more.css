@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main_container{
+    flex: 1;
+}
+.know{
+margin: 5%;
+padding:2%;
+border: 2px solid grey;
+border-radius: 10px;
+}
+.know h1{
+font-size: 2.7vw;
+}
+.know_container{
+width: 100%;
+height: auto;
+display: flex;
+gap:3%;
+}
+.know_container img{
+width:45%;
+/* padding:1%; */
+border:1px solid grey;
+border-radius: 10px;
+}
+.list{
+width: 100%;
+}
+.list_items{
+width: 100%;
+display: flex;
+align-items:baseline;
+border: 1px solid grey;
+border-radius: 10px;
+padding: 1%;
+margin-bottom: 2%;
+}
+.list_items h4{
+font-size: 1.5vw;
+color: rgb(78, 76, 76);
+float: right;
+}
+.list_items h3{
+font-size: 1.5vw;
+margin: 0 8% 0 0;
+}
+#feat{
+margin: 0 5% 0 0;
+}
+#brand{
+margin: 0 6% 0 0;
+}
+.stars{
+display: flex;
+align-items: center;
+}
+.stars i{
+font-size: 1.8vw;
+margin: 0 2% 0 0 ;
+}
+.links a{
+text-decoration: none;
+color:white;
+font-weight: bold;
+background-color:rgb(42, 75, 43);
+border: 1px solid rgb(42, 75, 43);
+text-align: center;
+padding: 1.5%;
+width:20%;
+border-radius: 10px;
+font-size: 1.5vw;
+margin: 0 0 0 2%;
+white-space: nowrap;
+}
+.ham{
+display: none;
+color:white;
+font-size: 5vw;
+}
+.links{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.links a:hover{
+background-color: white;
+color: rgb(42, 75, 43);
+transition: 0.4s ease-in;
+}
+@media screen and (max-width:900px) {
+.list_items h4,.list_items h3,.stars a{
+    font-size: 2vw !important;
+}
+.links a{
+    width: 35%;
+}
+.know_container img{
+    height: 250px;
+    width:45%;
+}
+.know h1{
+    font-size: 4vw !important;
+}
+}
+@media screen and (max-width:650px) {
+.know h1{
+    font-size: 5vw !important;
+    text-align: center;
+}
+.know_container img{
+    width:100%;
+    height: 250px;
+    margin-bottom: 3%;
+}
+.box1 h4{
+    font-size: 4.5vw !important;
+}
+.links a,.know_container h4,.know_container h3{
+    font-size: 3vw !important;
+}
+.stars i{
+    font-size: 3vw !important;
+}
+.know_container{
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media screen and (max-width:400px) {
+   .know_container img{
+    height: 150px;
+   }
+}

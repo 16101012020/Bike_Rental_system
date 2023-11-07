@@ -1,0 +1,113 @@
+.booking h1{
+font-size: 3vw;
+padding-left:4%;
+}
+.first{
+display: flex;
+border: 1px solid grey;
+align-items: center;
+width: 100%;
+}
+.first .box2{
+position: absolute;
+right: 10%;
+width: 15%;
+color:  rgb(42, 75, 4);
+padding: 0.4%;
+justify-content: center;
+border-radius: 10px;
+background-color: #bad79f;
+border:1px solid rgb(42, 75, 4);
+}
+.booking{
+margin: 5%;
+border: 1px solid grey;
+}
+.booking_content{
+display: flex;
+align-items: baseline;
+gap:60%;
+padding: 1% 0 0 0;
+width: 100%;
+}
+.box1{
+padding: 1% 4% 1% 4%;
+border: 1px solid grey;
+}
+.box1 h2{
+font-size: 2vw;
+}
+.box2 {
+display: flex;
+align-items: center;
+gap:1%;
+}
+.box5,.box4{
+width: 100%;
+white-space: nowrap;
+padding: 0;
+}
+.box2 p,.box2 h3{
+font-size: 1.5vw;
+}
+#pagination{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pagination a{
+    text-decoration: none;
+    cursor: pointer;
+    margin: 1%;
+    color:white;
+    background-color: #506730;
+    padding: 1%;
+    font-size: 1.4vw;
+    width: 4%;
+    text-align: center;
+    border-radius: 5px;
+}
+#pagination a:hover{
+ background-color:#253311;
+ transition: 0.4s ease-in;
+}
+#pagination a.active {
+    background-color:#253311;
+    transition: 0.4s ease-in;
+}
+@media screen and (max-width:1000px) {
+.booking_content{
+line-height: 1.2;
+}
+}
+@media screen and (max-width:650px) {
+
+.booking_content{
+line-height: 1;
+}
+}
+@media screen and (max-width:500px) {
+.booking h1{
+font-size: 5vw;
+}
+.box1 h2{
+font-size: 3.5vw !important;
+}
+.box2 h3
+{
+font-size: 2.5vw!important;
+}
+.box2 p{
+font-size: 2.5vw !important;
+}
+.booking_content{
+gap:30%;
+}
+.first .box2{
+width: 25%;
+}
+.first .box2 h3{
+font-size: 3vw;
+}
+}

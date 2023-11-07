@@ -1,0 +1,204 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main_container{
+        flex: 1;
+    }
+    .nav_bar {
+        background-color: white;
+        color: black;
+        top: 0;
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding:1% 0 1% 0;
+        position: relative;
+        border-bottom: 0.5px solid white;
+       background-color: rgb(42, 75, 43);
+       color:white;
+    }
+    a img {
+        width: 11%;
+        border-radius: 100%;
+        margin:0 1% 0 4%;
+    }
+    a h1{
+        font-size: 2.1vw;
+        text-decoration: none;
+        color: white;
+        width:auto;
+        display: inline-block;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+        font-family: 'Satisfy';
+        text-decoration: underline;
+    }
+    a h1:hover,.box a:hover{
+        color:#bad79f;
+        transition: 0.4s ease-in;
+    }
+    .box a i:hover
+    {
+        color:#bad79f;
+        transition: 0.4s ease-in;   
+    }
+    .side_bar a{
+        display: flex;
+        align-items: center;
+    }
+    .left_wrap{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0 0 0 30%;
+        box-sizing: border-box;
+        padding-left: 8%;
+    }
+    .left_wrap i{
+        cursor: pointer;     
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        margin: 0 7% 0 0;
+    }
+    .box i{
+        margin: 0 7% 0 0;
+    }
+    .box a,.box i{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2vw;
+        white-space: nowrap;
+    }
+    .dropdown-content.active
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top:100%;
+    right: 0;
+    background-color:rgb(42, 75, 43);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    border-radius: 5px;
+  }
+  .ham{
+    display: none;
+    color:white;
+    font-size: 5vw;
+}
+  .dropdown-content a{
+    font-size: 3.5vw;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    top:100%;
+    right: 0;
+    background-color:rgb(42, 75, 43);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    border-radius: 5px;
+  }
+  .dropdown-content a:hover{
+    color:#bad79f;
+    transition: 0.4s ease-in;
+  }
+  @media screen and (min-width:2500px) {
+     .side_bar h1{
+        font-size: 2.5vw;
+        white-space: nowrap;
+     }
+     .nav_bar a img{
+        width: 19%;
+     }
+  }
+  @media screen and (max-width:950px) {
+    .left_wrap{
+        padding-right: 10%;
+    }
+    a img {
+        /* height: 2%; */
+        width: 16%;
+    }
+    .side_bar h1{
+        font-size: 3vw;
+        white-space:nowrap;
+    }
+    .box a{
+        font-size: 1.5vw;
+    } 
+    .side_bar img{
+        width:21%;
+    }
+    .block p{
+    font-size: 2vw;
+    }
+    .box1 h4,.box1 p,.stars i{
+        font-size: 2vw;
+    }
+    .links a{
+        font-size: 2vw;
+        padding: 3%;
+    }   
+    .about_container{
+        width: 65%;
+    }
+    .about h4{
+        font-size: 3vw;
+    }
+    .about p,
+    .customerName h2{
+        font-size: 2vw;
+    }
+    .contact h4{
+        font-size: 3vw;
+    }
+    .contact p,.contact i,.end{
+        font-size: 2vw;
+    }
+ }
+ @media screen and (max-width:650px) {
+    .ham{
+        display: inline-block;
+        width: 40%;
+        text-align: center;
+        font-size: 5vw;      
+    }
+    .left_wrap{
+        display: none;
+    }
+    .side_bar img{
+        width: 10%;
+    }
+    .side_bar h1{
+        font-size: 5vw;
+    }
+    .nav_bar{
+        padding-right: 4%;
+    }
+ }
+ .w-100{
+    width: 100%;
+ }

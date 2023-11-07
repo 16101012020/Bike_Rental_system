@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+    }
+    .main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+    .main_container{
+    flex: 1;
+    }
+    .select {
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: 7%;
+    display: flex;
+    
+    flex-direction: column;
+    }
+    .img_wrap img{
+        width:50%;
+        line-height: 0;
+    }
+    .img_wrap{
+        display: flex;
+        height: 460px;
+    }
+    .container{
+        width:100%;
+    }
+    .select h1{
+    font-size: 3vw;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    }
+    .select_container{
+    display:flex;
+    flex-direction: column;
+    padding: 1%;
+    margin-top: 3%;
+    }
+    .select_container input{
+    width: 100%;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    color: rgb(78, 76, 76);
+    border: 1px solid gray;
+    margin: auto auto 2% auto;
+    }
+    input
+    {
+    background: url(https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678116-calendar-512.png);
+    background-size: 8%;
+    background-repeat: no-repeat;
+    background-position: 98%;
+    padding: 1%;
+    cursor: pointer;
+    }
+    
+    input[type="date"]::-webkit-calendar-picker-indicator
+    {
+    opacity: 0;
+    cursor: pointer;
+    }
+    .amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap:3%;
+    }
+    .amount_container{
+    background-color: rgb(42, 123, 230);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0.5%;
+    width: 80%;
+    }
+    .amount_container h2{
+    font-size: 1.7vw;
+    color:white;
+    padding-right: 4%;
+    white-space: nowrap;
+    }
+    .amount h3{
+    font-size: 1.7vw;
+    padding: 1%;
+    padding-left: 4%;
+    color: white;
+    border-left: 1px solid white;
+    white-space:nowrap;
+    }
+    .pay{
+    padding: 0.5%;
+    background-color: rgb(42, 123, 230);
+    border-radius: 10px;
+    width:60%;
+    cursor: pointer;
+    }
+    .pay a{
+    text-decoration: none;
+    }
+    .pay a:hover{
+    opacity: 0.4;
+    transition: 0.4s ease-in;
+    }
+    .pay h2{
+    color: white;
+    text-align: center;
+    font-size: 1.7vw;
+    padding: 2%;
+    text-decoration: none;
+    white-space: nowrap;
+    }
+    
+    .options{
+    padding-left: 10%;
+    margin-top: 3%;
+    display: none;
+    }
+    .btn{
+    border-radius: 10px;
+    margin:3% auto 3% auto;
+    background-color: rgb(42, 123, 230);
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5%;
+    }
+    .btn a{
+    font-size: 2vw;
+    text-decoration: none;
+    color: white;
+    }
+    .options h2{
+    font-size: 3vw;
+    }
+    .box2{
+    display: flex;
+    align-items: center;
+    gap:1%;
+    }
+    .box2 img{
+    border-radius: 100%;
+    width: 8%;
+    margin-left: 2%;
+    }
+    .box2 p{
+    font-size: 2vw;
+    }
+    input[type="radio"] {
+    transform: scale(1.5);
+    }
+    @media screen and (min-width:2500px)  {
+        .select{
+            height: 1000px;
+        }
+        .myImage{
+            height: 863px;
+        }
+    }
+    @media screen and (max-width:1200px) {
+    input[type="radio"] {
+    transform: scale(1);
+    }
+    .select{
+        height: 400px;
+    }
+    }
+    @media screen and (max-width:650px) {
+    .select h1{
+    font-size: 5vw;
+    }
+    .amount_container input,.box2 p{
+    font-size: 2.5vw;
+    }
+    .amount_container h2,.amount_container h3{
+    font-size: 2vw;
+    }
+    .pay h2{
+    font-size: 2vw;
+    }
+    .ham{
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    font-size: 5vw;      
+    }
+    .btn a{
+    font-size: 2.5vw;
+    }
+    .side_bar h1,.options h2{
+    font-size: 5vw;
+    }
+    input[type="radio"] {
+    transform: scale(0.7);
+    }
+    .box2 img{
+    width: 8%;
+    }
+    }
+    
+    @media screen and (max-width:500px) {
+    .select h1{
+    font-size: 5vw;
+    }
+    .select{
+        height: 200px;
+    }
+    .amount_container input{
+    font-size: 3vw;
+    }
+    .amount_container h2,.amount_container h3{
+    font-size: 2.5vw;
+    }
+    .amount_container{
+    width: 80%;
+    }
+    .pay{
+    width: 80%;
+    }
+    .pay h2{
+    font-size: 2.5vw;
+    }
+    }
+    

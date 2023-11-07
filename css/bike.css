@@ -1,0 +1,222 @@
+
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main_container{
+        flex: 1;
+    }
+
+
+.bike h1{
+    text-align: center;
+    margin: 0 0 0 0;
+    color:rgb(77, 77, 77);
+    font-size:3vw;
+    padding: 1% 0 1% 0;
+}
+.heading{
+    background-color: rgb(224, 224, 224);
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+}
+.bike_container {
+  margin: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3% 3%;
+}
+.box1 img:hover{
+    opacity: 0.8;
+}
+.box1 {
+  flex-basis: calc(33.33% - 2%); /* Adjust the width of each card */
+  margin-bottom: 3%;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.box1 h4{
+    font-size: 1.7vw;
+    margin-left: 4%;
+    color:#506730;
+    white-space: nowrap;
+}
+.box1 img{
+  width:100%;
+  height: 400px;
+}
+.links a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background-color: rgb(42, 75, 43);
+    padding: 3%;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgb(42, 75, 43);
+    margin-right: 5%;
+}
+.links a:hover{
+    color: rgb(42, 75, 43);
+    background-color: white;
+    transition: 0.4s ease-in;
+}
+.block{
+    padding: 1%;
+    background-color:#bad79f;
+    margin:2% 0 2% 0 ;
+    width: 100%;
+}
+.block p{
+    font-size: 1.5vw;
+    color: rgb(42, 75, 43);
+    font-weight: bold;
+    text-align: center;
+    letter-spacing:2px;
+}
+.links{
+    margin: 5% 0 2% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links a{
+    width: 50%;
+    margin: auto 2% auto 2%;
+}
+.ham{
+    display: none;
+    color:white;
+}
+.name{
+    display: flex;
+    margin-left: 4%;
+    align-items: baseline;
+}
+.name p{
+    font-size: 1.7vw;
+}
+.stars{
+    display: flex;
+    margin:2% 0 0 4%;
+    align-items: center;
+}
+.stars i{
+    font-size: 1.7vw;
+    margin: 0 2% 0 0 ;
+}
+ .customerName{
+    display:flex;
+    align-items:center;
+    gap:1%;
+    width:100%;
+    justify-content:center;
+    background-color:#506730;
+    padding:0.2% 0 0.2% 0;
+    color:white;
+    margin:0 0  2% 0;
+    font-size:1.2vw;
+ }
+ .customerName img{
+    width:3.3%;
+    border:1px solid grey;
+    border-radius:100%;
+ }
+@media screen and (max-width:1440px)
+{
+    .box1 img{
+  width:100%;
+  height: 240px;
+}
+}
+@media screen and (max-width:950px) {
+    .left_wrap{
+        padding-right: 10%;
+    }
+    .box1 img{
+    width:100%;
+    height: 170px;
+    }
+    .side_bar h1{
+        font-size: 3vw;
+        white-space:nowrap;
+    }
+    .box a{
+        font-size: 2vw;
+    } 
+    .side_bar img{
+        width:21%;
+    }
+    .block p{
+    font-size: 2vw;
+    }
+    .box1 h4,.box1 p,.stars i{
+        font-size: 2vw;
+    }
+    .links a{
+        font-size: 2vw;
+        padding: 3%;
+    }    
+ }
+ @media screen and (max-width:650px) {
+    .box1 {
+    flex-basis: calc(50% - 2%) !important;
+    }
+    .box1 img{
+      height: 100px !important;
+}
+    .block p{
+        font-size: 3vw !important;
+    }
+    .box1 h4,.box1 p,.stars i{
+        font-size: 3.7vw !important;
+    }
+    .links a,.customerName h2{
+        font-size: 3vw !important;
+    }
+    .ham{
+        display: inline-block;
+        width: 40%;
+        text-align: center;
+        font-size: 5vw;      
+    }
+    .left_wrap{
+        display: none;
+    }
+    .bike h1{
+        font-size: 7vw!important;
+    }
+    .side_bar img{
+        width: 10%;
+    }
+    .side_bar h1{
+        font-size: 5vw;
+    }
+    .block{
+        border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    }
+    .nav_bar{
+        padding-right: 4%;
+    }
+    .end{
+        font-size: 3.5vw;
+    }
+ }
+ @media screen and (max-width:450px){
+ .box1 img{
+  height: 110px;
+}
+ }

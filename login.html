@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Mukta:wght@300&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <div class="nav_bar">
+                <div class="side_bar">
+                    <a href="index.html"><img src="img/preview.jpg">
+                    <h1>Bike Rental System</h1></a>
+                </div>
+                <p>Login/Sign-Up Form</p>
+            </div>
+        </header>
+        <div class="container">
+            <div class="error_msg">
+                <p id="error"></p>
+            </div>
+            <div class="login_container">
+            <div class="login" id="loginForm">
+                <input style="width:80%;" type="text" placeholder="Enter your mobile no." id="mob">
+                <a href="#" onclick="validates()">Get OTP</a>
+            </div> 
+        </div>
+            <div class="search">
+                <img src="img/male-portrait-people-profile-perfect-social-media-business-presentations-user-interface-ux-graphic-web-design-applications-interfaces-vector-illustration_501069-2.jpg">
+                <input style="width:70%;" type="text" placeholder="Enter your OTP" id="otp1">
+                <a href="#" id="login">
+                    LOGIN</a>
+                <div class="generateOTP" style="display: flex;align-items: center;justify-content: center;">
+                <p>Generated OTP :</p><p id="getOTP"></p>
+                </div>
+            </div>
+            <div class="register" id="registrationForm" style="display: none;">
+                <p>New Registration Form</p>
+                <input style="width:100%; margin: 0 0 5% 0;" type="text" placeholder="Name*" id="name"> 
+                <input style="width:100%; margin: 0 0 5% 0;" type="text" placeholder="Email Id*" id="email"> 
+                <input style="width:100%;margin: 0 0 5% 0;" type="text" placeholder="Enter your mobile no." id="mobile">
+                <div class="login">
+                    <input style="width:70%;" type="text" placeholder="Identity No.*" id="identity"> 
+                    <label for="upload-file" style="margin-right: 2%;"></label>
+                    <input type="file" id="upload-file">
+                </div> 
+                <p id="size">Document size must be less than 2MB</p>
+              
+                <div class="login" style="margin: 3% 0 0 0;">
+                    <input style="width:70%;" type="text" placeholder="Enter your OTP" id="otp2">
+                    <a href="#" onclick="validate()" id="submit">REGISTER</a>
+                </div> 
+                <div class="generateOTP" style="display: flex;align-items: center;justify-content: center;">
+                    <p>Generated OTP :</p><p id="getOTP2"></p>
+               </div>
+        </div>
+    </div>
+    
+    <script>
+var loginForm = document.getElementById("loginForm");
+let name=document.getElementById("name");
+let email=document.getElementById("email");
+let identity=document.getElementById("identity");
+let otp2=document.getElementById("otp2");
+let otp1=document.getElementById("otp1");
+let mobile=document.getElementById("mobile");
+let mob=document.getElementById("mob");
+let upload_file=document.getElementById("upload-file");
+let val;
+var flag=0;
+
+//Function to show registration form if user does not exist
+function showRegistrationForm() {
+    var registrationForm = document.getElementById("registrationForm");
+    var navbar = document.getElementById("navbar");
+
+    setTimeout(function(){
+    loginForm.style.display = "none";
+    registrationForm.style.display = "block";
+    mobile.value=mob.value;
+    mobile.readOnly=true;
+    },400);
+}
+
+//function to generate otp
+function getOTP()
+{
+    $.ajax({
+        url: 'getOtp.php',
+        type: 'GET',
+        dataType: 'html',
+        success: function(data){
+            $('#getOTP').html(data); 
+            $('#getOTP2').html(data); 
+            val=data;
+        }
+    });
+}
+console.log(val);
+//if user click on login button then session starts if the user exist:
+$(document).on("click","#login",function(e){
+        if(otp1.value==""){
+            document.getElementsByClassName("error_msg")[0].style.display="block";
+            document.getElementById("error").innerHTML="Please enter a valid OTP"; 
+            otp1.style.border="1px solid grey";
+        }
+        else  if(otp1.value!=val)
+    {
+        document.getElementsByClassName("error_msg")[0].style.display="block";
+            document.getElementById("error").innerHTML="Please enter a valid OTP"; 
+    }
+    else{
+        document.getElementsByClassName("error_msg")[0].style.display="none";       
+        $.ajax({
+            url:"set_userId.php",
+            type:"POST",
+            dataType: "json",
+            success:function(data){
+                if(data==1)
+                window.location.href = "bike.php";      
+            }
+        }); 
+     }
+    });
+ 
+//function to check whether user exist or not
+function validates() {
+        if (mob == "" || mob.value.length != 10) {
+    document.getElementsByClassName("error_msg")[0].style.display="block";
+   document.getElementById("error").innerHTML="Please enter a valid number"; 
+}
+    else {
+        document.getElementsByClassName("error_msg")[0].style.display="none";
+        flag=0;
+    $.ajax({
+        url: "login_search.php",
+        type: "POST",
+        data: { mobile: mob.value , sign:flag},
+        success: function (data) {
+            if (data == 1) {
+                loginForm.style.display = "none";
+                var searchElement = document.querySelector(".search");
+                searchElement.style.display = "block";
+                getOTP();
+            } else {
+                showRegistrationForm();
+                getOTP();
+            }
+            
+        }
+    });
+}
+}
+
+//function to check whether the input fields are filled or not and then update the user DB
+function validate(){
+    event.preventDefault();
+    var flag=0;
+    
+    if(name.value=="")
+    {
+        name.style.border="2px solid red";
+        flag=1;
+    }       
+    else
+    {
+    name.style.border="1px solid grey";
+    }   
+    if(email.value=="")
+    {
+        email.style.border="2px solid red";
+        flag=1;
+    }
+    else
+    {
+    email.style.border="1px solid grey";
+    }   
+    if(identity.value=="")
+    {
+        identity.style.border="2px solid red";
+        flag=1
+    }
+    else
+    {
+    identity.style.border="1px solid grey";
+    }   
+    if(mobile.value=="")
+    {
+        mobile.style.border="2px solid red";
+        flag=1
+    }
+    else
+    {
+    mobile.style.border="1px solid grey";
+    }   
+    if(otp2.value!=val)
+    {
+        otp2.style.border="2px solid red";
+        flag=1
+    }
+    else
+    {
+        otp2.style.border="1px solid grey";
+    } 
+    if(upload_file.value=="")
+    { 
+        upload_file.style.border="2px solid red";
+        flag=1
+    }  
+    else
+    {
+        upload_file.style.border="1px solid grey";
+    }
+    if(flag==0)
+    {
+        $.ajax({
+            url:"login_update.php",
+            type:"POST",
+            data:{name:name.value, mobile:mobile.value, email:email.value, identity:identity.value},
+            success:function(data){
+                if(data==1)
+                window.location.reload();
+            }
+        });
+    }
+}
+</script>
+</body>
+</html>

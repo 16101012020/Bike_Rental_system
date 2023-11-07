@@ -1,0 +1,6 @@
+// custom error log
+
+<?php
+$error_message = "An error occurred: Something went wrong.";
+error_log($error_message);
+?>

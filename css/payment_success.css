@@ -1,0 +1,86 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Martian Mono', monospace;
+font-family: 'Mukta', sans-serif;
+}
+.main{
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+.main_container{
+flex: 1;
+}
+.success
+{
+margin:5%;
+border-radius: 10px;
+border: 2px solid grey;
+}
+.success h1{
+text-align: center;
+font-size:3vw;
+border-bottom: 1px solid grey;
+}
+.success_container{
+padding: 2% 4% 2% 4%;
+background-color:rgb(180, 180, 180); 
+border-bottom: 1px solid grey;
+}
+.success_container h2{
+font-size: 2vw;
+}
+.success_container p{
+font-size: 1.5vw;
+}
+.click a{
+text-decoration: none;
+color:white;
+font-size: 1.7vw;
+background-color: rgb(42, 123, 230);
+border-radius: 30px;
+padding: 0.6%;
+width: 30%;
+text-align: center;
+}
+.click a:hover{
+opacity: 0.4;
+transition: 0.4s ease-in;
+}
+.click{
+padding: 2%;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.amount{
+display: flex; 
+align-items: center;
+}
+.amount h2{
+font-size: 2vw;
+}
+.amount i
+{
+margin-left: 1%;
+font-size: 2vw;
+}
+@media screen and (max-width:530px) {
+.success h1{
+font-size: 5vw;
+}
+.success_container h2{
+font-size: 3vw;
+}
+.amount i{
+font-size: 3vw;
+}
+.success p{
+font-size: 2vw;
+}
+.click a{
+font-size: 3vw;
+}
+}

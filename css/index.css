@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    .nav_bar {
+    background-color: white;
+    color: black;
+    top: 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.2%;
+    border-bottom: 1px solid white;
+    background-color:rgb(42, 75, 43);
+    color:white;
+    }
+    .nav_bar img {
+    height: 2%;
+    width: 5%;
+    border-radius: 100%;
+    margin:0 1% 0 2%;
+    }
+    .nav_bar h1{
+    font-size: 2.1vw;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Satisfy';
+    text-decoration: underline;
+    }
+    .nav_bar a{
+    text-decoration: none;
+    color:rgb(42, 75, 43);
+    width:15%;
+    font-weight: bold;
+    padding: 0.4%;
+    font-size: 1.5vw;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    background-color: #bad79f;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+    }
+    .nav_bar a:hover,.slider a:hover{
+    background-color: white;
+    color:rgb(42, 75, 43);
+    transition: 0.4s ease-in;
+    }
+    
+    .side_bar{
+    display: flex;
+    align-items: center;
+    width:80%;
+    }
+    
+    .aboutBikes{
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+    margin: 7% 5% 7% 5%;
+    }
+    .heading_section{
+        font-size: 3vw;
+        color:rgb(42, 75, 43);
+        margin: 5% auto 5% auto;
+       padding: 0 2% 0 2%;
+       line-height: 90%;
+       border-bottom: 2px solid rgb(42, 75, 43);
+       width: fit-content;
+    }
+    .aboutBikes_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .aboutBikes_container img{
+        width:45%;
+        padding: 1% 1% 5% 1%;
+        box-shadow: rgb(70, 69, 69) 0 0 5px;
+        margin-left: 5%;
+    }
+    .aboutBikes_container p{
+        width:100%;
+        font-size: 1.4vw;
+        text-align: center;
+    }
+    .services{
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+        margin: 7% 5% 7% 5%;   
+    }
+    .service_container{
+    margin: 0 3% 0 3%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:4%;
+    }
+    .box1{
+    border: 1px solid grey;
+    padding:3%; 
+    text-align: center;
+    border-radius: 10px;
+    }
+    .box1 img{
+    width:100%;
+    border-radius: 10px;
+    object-fit: cover;
+    }
+    .box1 h2{
+    margin: 3% 0 3% 0;
+    font-size: 1.3vw;
+    }
+    .faq{
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+        margin: 7% 5% 7% 5%;
+    }
+    .faq_container{
+    background-color: rgb(240, 239, 239);
+    padding:2.5%;
+    border-radius: 10px;
+    padding-bottom: 5%;
+    }
+    .box2{
+    border-bottom: 1.5px solid grey;
+    padding:2%;
+    width:auto;
+    }
+    .question{
+    display: flex;
+    align-items: center;
+    }
+    .question h4{
+    font-size: 1.5vw;
+    cursor: pointer;
+    }
+    .question i{
+    cursor: pointer;
+    font-size: 2vw;
+    position: absolute;
+    right: 10%;
+    }
+    #answer h4{
+    color:grey;
+    font-size:1.5vw ;
+    }
+    .footer
+    {
+        margin:5% 0 0 0;
+        background-color: rgb(42, 75, 43);
+        padding:3%;
+        color:white;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+        width:100%;
+        height: auto;
+    }
+    .about_container{
+        display: flex;
+        align-items: baseline;
+        width:70%;
+    }
+    .about{
+        padding: 2%;
+    }
+    .about h4{
+        text-align: center;
+        font-size: 2vw;
+    }
+    .about p{
+        font-size: 1.3vw;
+        margin: 0 0 3% 0;
+    }
+    .contact{
+        padding: 2%;
+        position: absolute;
+        right:3%;
+    }
+    .contact h4{
+        font-size:2vw;
+    }
+    li{
+        list-style: none;
+    }
+    .box3{
+        display: flex;
+        align-items: center;
+        gap:6%;
+        padding:2%;
+        font-size: 1.3vw;
+    }
+    li:hover{
+        color:rgb(212, 84, 24);
+        transition: 0.4s ease-in;
+        cursor: pointer;
+    }
+    .img_list{
+        display: flex;
+        font-size: 2.2vw;
+        padding: 3%;;
+    }
+    .img_list i{
+        margin: 0 10% 0 0;
+        cursor: pointer;
+    }
+    .img_list i:hover{
+        transition: 0.4s ease-in;
+        color: rgb(212, 84, 24);
+    }
+    .end{
+        font-size: 1.4vw;
+        text-align: center;
+        padding: 1%;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+    }
+    .swiper {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    }
+    .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    bottom:0;
+    position: absolute;
+    /* opacity: 0.8; */
+    }
+    .slider{
+    color:white;
+    position: relative;
+    font-size: 1.8vw;
+    width:60%;
+    height: auto;
+    transform: translate(-10%, -20%);
+    padding: 20% 0 10% 15%;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+    }
+    .slider h1{
+        white-space: nowrap;
+    }
+    .slider p{
+    font-size: 1.4vw;
+    }
+    .slider a{
+    text-decoration: none;
+    color: rgb(42, 75, 43);
+    font-weight: bold;
+    font-size: 2vw;
+    background-color:#bad79f;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1% 4% 1% 4%;
+    }
+    .swiper {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .swiper-button-next, .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset,41%)!important;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 70px var(--swiper-pagination-bullet-horizontal-gap,4px)!important;
+    }
+    @media screen and (min-width:2500px)
+    {
+        .swiper{
+            height: 1000px;
+        }
+        .swiper-slide img{
+            height: 1000px;
+        }
+    }
+    @media screen and (max-width:1200px)
+    {
+        .swiper{
+            height: 500px;
+        }
+    }
+    @media screen and (max-width:900px) {
+        .side_bar h1, .slider h1,.heading_section{
+                font-size: 4vw;
+            }
+        .side_bar img{
+            width:10%;
+        }
+        .nav_bar a{
+                font-size: 2.2vw;
+                width:25%;
+                margin-right: 2%;
+        }
+        .swiper{
+            height: 470px;
+        }
+        :root {
+            --swiper-navigation-size: 30px!important;
+        }
+        .slider{
+            width: 70%;
+        }
+        .slider p,.aboutBikes p,#answer h4,.contact p,.contact i,.end,.about p,.question h4{
+            font-size: 2vw;
+        }
+        .slider a,.about h4,.contact h4{
+            font-size: 3vw;
+        }
+        .box1 h2{
+            font-size: 1.8vw;
+        }
+        .question i{
+            font-size: 2.5vw;
+        }
+        .about_container{
+            width: 65%;
+        }
+    }
+    @media screen and (max-width:450px)
+    {
+        .side_bar h1, .slider h1,.heading_section{
+            font-size: 5vw;
+        }
+        .swiper-slide img{
+            bottom: -35%;
+        }
+    .side_bar img{
+        width:10%;
+    }
+    .nav_bar a{
+            font-size: 3vw;
+            width:25%;
+            margin-right: 2%;
+    }
+    .swiper{
+        height: 250px;
+    }
+    :root {
+        --swiper-navigation-size: 20px!important;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom:var(--swiper-pagination-bottom,-35px)!important;
+    }
+    .slider{
+        width: 70%;
+    }
+    .slider p,.aboutBikes p,#answer h4,.question h4,.end{
+        font-size: 3vw;
+    }
+    .slider a,.about h4,.contact h4{
+        font-size: 4vw;
+    }
+    .aboutBikes_container{
+        flex-direction: column;
+    }
+    .aboutBikes_container img{
+        margin-top: 2%;
+        width:90%;
+        height: 220px;
+    }
+    .box1 h2{
+        font-size: 2vw;
+    }
+    .question i{
+        font-size: 2.5vw;
+    }
+    .about_container{
+        width: 65%;
+    }
+    }
+    

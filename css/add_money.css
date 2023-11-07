@@ -1,0 +1,218 @@
+.add{
+margin: 5% 5% 10% 5%;
+border-radius: 10px;
+height: auto;
+border: 2px solid grey;
+}
+.add h1{
+font-size: 3vw;
+text-align: center;
+border-bottom: 1px solid grey;
+}
+.enter {
+display:flex;
+align-items: center;
+justify-content: center;
+padding: 2%;
+}
+.enter input{
+font-size: 1.5vw;
+border: 1px solid grey;
+width: 40%;
+margin-left: 2%;
+border-radius: 10px;
+padding: 1%;
+}
+#ent{
+background-color: rgb(42, 123, 230);
+margin-left:2%;
+font-size: 2vw;
+color: white;
+width: 15%;
+padding: 0.5%;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+}
+#ent:hover,.btn:hover{
+opacity: 0.4;
+transition: 0.4s ease-in;
+}
+.amount{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.amount p{
+font-size: 1.5vw;
+padding: 1%;
+border: 1px solid grey;
+text-align: center;
+width: 10%;
+border-radius: 30px;
+margin-right: 2%;
+cursor: pointer;
+margin-bottom: 4%;
+}
+.amount p:hover{
+color:rgb(42, 123, 230);
+opacity: 0.8;
+transition: 0.4s ease-in;
+}
+.pay{
+cursor: pointer;
+}
+.pay a{
+text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(42, 123, 230);
+margin-top: 2%;
+width:55%;
+margin: auto auto 3% auto ;
+border-radius: 10px;
+padding: 0.5%;
+}
+.pay a h2{
+font-size: 2vw;
+color: white;
+text-align: center;
+padding-right: 4%;
+}
+.pay a p{
+font-size: 2vw;
+padding-left: 4%;
+color: white;
+border-left: 1px solid white;
+white-space:nowrap;
+}
+.ham{
+display: none;
+color:white;
+font-size: 5vw;
+}
+.dropdown-content.active
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+top:100%;
+right: 0;
+background-color:rgb(42, 75, 43);
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+padding: 1%;
+border-radius: 5px;
+}
+.dropdown-content a{
+font-size: 3.5vw;
+color: white;
+text-decoration: none;
+width: 100%;
+border-bottom: 1px solid white;
+cursor: pointer;
+}
+.dropdown-content a:hover{
+color:rgb(212, 84, 24);
+transition: 0.4s ease-in;
+}
+.options{
+padding-left: 20%;
+padding-bottom: 5%;
+display: none;
+}
+.btn{
+border-radius: 10px;
+margin: 2% 0 0 4%;
+background-color: rgb(42, 123, 230);
+width: 20%;
+display: flex;
+justify-content: center;
+padding: 0.5%;
+}
+.btn a{
+font-size: 2vw;
+text-decoration: none;
+color: white;
+}
+.options h2{
+font-size: 3vw;
+}
+.box2{
+display: flex;
+align-items: center;
+gap:1%;
+}
+.box2 img{
+border-radius: 100%;
+width: 5%;
+}
+.box2 p{
+font-size: 2vw;
+}
+input[type="radio"] {
+transform: scale(1.5);
+}
+@media screen and (max-width:950px) {
+
+input[type="radio"] {
+transform: scale(1);
+}
+}
+@media screen and (max-width:650px) {
+
+.add h1,.options h2{
+    font-size: 5vw;
+}
+.enter input{
+    font-size: 3vw;
+}
+input[type="radio"] {
+transform: scale(0.7);
+}
+.btn a{
+font-size: 3.5vw;
+}
+#ent,.box2 p{
+    font-size: 3.5vw;
+}
+.enter{
+    margin:4% 0 2% 0;
+}
+.pay{
+    margin-top: 2%;
+}
+.box2 img{
+    width: 8%;
+}
+.amount p{
+    font-size: 3vw;
+    padding: 1%;
+    border-radius:20px;
+    width:15%;
+}
+.pay a h2,.pay a p{
+    font-size: 3.5vw;
+}
+}
+@media screen and (max-width:450px) {
+.add h1{
+    font-size: 5vw;
+}
+.enter input{
+    font-size: 3.5vw;
+}
+#ent{
+    font-size: 4vw;
+}
+.amount p{
+    font-size: 3.5vw;
+}
+.pay a h2,.pay a p{
+    font-size: 4vw;
+}
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://graphicriver.img.customer.envatousercontent.com/files/320839090/preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=590&s=ddbebeaf4d813e7877dc66f2f629f1ac">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Mukta:wght@300&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Mukta:wght@300&display=swap" rel="stylesheet">  
+    <title>Payment Failed</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main_container{
+        flex: 1;
+    }
+    .nav_bar {
+        background-color: white;
+        color: black;
+        top: 0;
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0.4%;
+        border-bottom: 2px solid white;
+       background-color: rgb(42, 75, 43);
+       color:white;
+    }
+    a img {
+        height: 2%;
+        width: 13%;
+        border-radius: 100%;
+        margin:0 1% 0 4%;
+    }
+    a h1{
+        font-size: 2.1vw;
+        text-decoration: none;
+        color: white;
+        width:auto;
+        display: inline-block;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+        font-family: 'Satisfy';
+        text-decoration: underline;
+    }
+    a h1:hover,.box a:hover,.box a i:hover{
+        color:rgb(212, 84, 24);
+        transition: 0.4s ease-in;
+        text-decoration: underline
+    }
+
+    .side_bar a{
+        display: flex;
+        align-items: center;
+    }
+    .left_wrap{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0 0 0 20%;
+        box-sizing: border-box;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .left_wrap i{
+        cursor: pointer;     
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        margin: 0 7% 0 0;
+    }
+    .box i{
+        margin: 0 7% 0 0;
+    }
+    .box a,.box i{
+        text-decoration: none;
+        color: white;
+        font-size: 1.5vw;
+        white-space: nowrap;
+    }
+    .footer
+{
+    background-color: rgb(42, 75, 43);
+    padding:3%;
+    color:white;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+    width:100%;
+    height: auto;
+    flex-shrink: 0;
+}
+.about_container{
+    display: flex;
+    align-items: baseline;
+    width:70%;
+}
+.about{
+    padding: 2%;
+}
+.about h4{
+    text-align: center;
+    font-size: 2vw;
+}
+.about p{
+    font-size: 1.3vw;
+    margin: 0 0 3% 0;
+}
+.contact{
+    padding: 2%;
+    position: absolute;
+    right:3%;
+}
+.contact h4{
+    font-size:2vw;
+}
+li{
+    list-style: none;
+}
+.box3{
+    display: flex;
+    align-items: center;
+    gap:6%;
+    padding:2%;
+    font-size: 1.3vw;
+}
+li:hover{
+   color:rgb(212, 84, 24);
+   transition: 0.4s ease-in;
+   cursor: pointer;
+}
+.img_list{
+    display: flex;
+    font-size: 2.2vw;
+    padding: 3%;;
+}
+.img_list i{
+    margin: 0 10% 0 0;
+    cursor: pointer;
+}
+.img_list i:hover{
+    transition: 0.4s ease-in;
+    color: rgb(212, 84, 24);
+}
+.end{
+    font-size: 1.4vw;
+    text-align: center;
+    padding: 1%;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Mukta', sans-serif;
+}
+.success
+{
+    margin:5%;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+.success h1{
+    text-align: center;
+    font-size:3vw;
+    border-bottom: 1px solid grey;
+}
+.success_container{
+ padding: 2% 4% 2% 4%;
+ background-color:rgb(180, 180, 180);
+ border-bottom: 1px solid grey;
+}
+.success_container h2{
+    font-size: 2vw;
+}
+.success_container p{
+    font-size: 1.5vw;
+}
+.click a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.7vw;
+    background-color: rgb(42, 123, 230);
+    border-radius: 30px;
+    padding: 0.6%;
+    width: 30%;
+    text-align: center;
+}
+.click a:hover{
+    opacity: 0.4;
+    transition: 0.4s ease-in;
+}
+.click{
+    padding: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.amount{
+    display: flex; 
+    align-items: center;
+}
+.amount h2{
+    font-size: 2vw;
+}
+.amount i
+{
+    margin-left: 1%;
+    font-size: 2vw;
+}
+.ham{
+    display: none;
+    color:white;
+    font-size: 5vw;
+}
+@media screen and (max-width:950px) {
+    .left_wrap{
+        padding-right: 10%;
+    }
+    .side_bar h1{
+        font-size: 3vw;
+        white-space:nowrap;
+    }
+    .box a{
+        font-size: 2vw;
+    } 
+    .bike h1{
+        font-size: 4vw;
+    }
+    .side_bar img{
+        width:21%;
+    }
+    .block p{
+    font-size: 2vw;
+    }
+    .box1 h4{
+        font-size: 2vw;
+    }
+    .box1 img{
+        height: 150px;
+    }
+    .about_container{
+        width: 65%;
+    }
+    .about h4{
+        font-size: 3vw;
+    }
+    .about p{
+        font-size: 2vw;
+    }
+    .contact h4{
+        font-size: 3vw;
+    }
+    .contact p,.contact i,.end{
+        font-size: 2vw;
+    }
+ }
+ @media screen and (max-width:650px) {
+    .ham{
+        display: block;
+    }
+    .left_wrap{
+        display: none;
+    }
+    .side_bar img{
+        width: 10%;
+    }
+    .side_bar h1{
+        font-size: 5vw;
+    }
+    .nav_bar{
+        padding-right: 4%;
+    }
+    .end{
+        font-size: 3.5vw;
+    }
+}
+@media screen and (max-width:530px) {
+    .success h1{
+        font-size: 5vw;
+    }
+    .success_container h2{
+        font-size: 3vw;
+    }
+    .amount i{
+        font-size: 3vw;
+    }
+    .success p{
+        font-size: 2vw;
+    }
+    .click a{
+        font-size: 3vw;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="main_container">
+        <header>
+            <div class="nav_bar">
+                <div class="side_bar">
+                    <a href="index.html"><img src="https://graphicriver.img.customer.envatousercontent.com/files/320839090/preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=590&s=ddbebeaf4d813e7877dc66f2f629f1ac">
+                    <h1>Bike Rental System</h1></a>
+                </div>
+                <div class="left_wrap">
+                    <div class="box">
+                        <a id="font"  href="profile.html"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+                        Profile</a>
+                    </div>
+                    <div class="box">
+                        <a id="font" href="wallet_history.html"><i class="fa-solid fa-wallet"></i>
+                    Wallet Recharge</a>
+                    </div>
+                    <div class="box">
+                    <a id="font" href="rental_history.html"><i class="fa-solid fa-motorcycle"></i>
+                    Bookings</a>
+                    </div>
+                    <div class="box">
+                    <a id="font" href="index.html">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</a>
+                    </div>
+                </div>
+                <div class="ham">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <div class="success">
+            <h1>Payment Failed</h1>
+            <div class="success_container">
+                <h2>Amount</h2>
+                <div class="amount">
+                <h2>Rs 2000</h2><i class="fa-solid fa-circle-xmark" style="color: #c30909;background-color: white;border-radius: 100%;"></i>
+                </div>
+                <p>Payment Id : 100000789</p>
+                <p>Date, Time</p>
+                <p>Tried to pay using Paytm</p>
+            </div>
+            <div class="click">
+            <a href="select_date.html">Click on OK</a>
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+            <div class="about_container">
+                <div class="about">
+                    <h4>About Us</h4>
+                    <p>At Our Bike Rental Shop, we are passionate about providing an exceptional biking experience to all our customers. With years of industry expertise and a deep love for cycling,
+                        we have established ourselves as a trusted and reliable bike rental service.</p>
+                    <p>Customer satisfaction is at the core of everything we do. Our friendly and knowledgeable staff is dedicated to providing personalized assistance, helping you choose the right bike and offering recommendations on routes and destinations.
+                            We strive to make your rental experience seamless, convenient, and memorable.
+                    </p>
+                </div>
+                <div class="contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                    <li><div class="box3">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>+91 8505868062</p>
+                        </div></li>
+                    <li><div class="box3">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>parulsingh13012002@gmail.com</p>
+                        </div></li>
+                    <li><div class="box3">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Uttam Nagar West,New Delhi</p>
+                        </div></li>
+                    </ul>
+                    <div class="img_list">
+                    <i class="fa-brands fa-skype"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <h4>Copyright &copy <a href="iframe_block.html">iframe_block</a></h4>
+        </div>
+        </div>
+</body>
+</html>

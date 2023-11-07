@@ -1,0 +1,141 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Martian Mono', monospace;
+        font-family: 'Mukta', sans-serif;
+        /* background-color: black; */
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main_container{
+        flex: 1;
+    }
+.profile img{
+    background-color:rgb(158, 158, 158);
+    border-radius: 100%;
+    padding: 0.2%;
+    margin:5% auto 3% auto;
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+.profile{
+    margin: 5% 0 5% 0; 
+}
+.details{
+    margin: 0 3% 0 3%;
+    border-bottom: 1px solid grey;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+    border-radius: 10px;
+}
+.details_container h1{
+text-align: center;
+font-size: 3vw;
+border-bottom: 1px solid grey;
+color:rgb(78, 76, 76);
+}
+.box1{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    padding:0.8%;
+}
+.box1 h4{
+ font-size: 2vw;
+ margin: 0 0 0 2%;
+}
+.box1 h3{
+    font-size: 2vw;
+    position: absolute;
+    left:18%;
+    color:rgb(78, 76, 76);
+}
+.box1 p,.box2 p{
+    position: absolute;
+    right: 5%;
+    font-size: 2vw;
+    border-radius: 5px;
+    width: 15%;
+    background-color:#bad79f;
+    color: rgb(42, 75, 43);
+    font-weight: bold;
+    border: 1px solid rgb(42, 75, 43);
+    text-align: center;
+    cursor: pointer;
+}
+.box2 p{
+    margin: 0 0 0 6%;
+}
+.box1 p:hover,.box2 p:hover{
+    background-color: white;
+    
+    transition: 0.4s ease-in;
+}
+.box2{
+   padding:0.8%;
+   width: 100%;
+   border-bottom: 1px solid grey;
+   display: flex;
+   align-items: center;
+}
+.box2 h4{
+    font-size: 2vw;
+    margin: 0 0 0 2%;
+}
+.box2 input{
+    font-size: 1.3vw;
+    padding: 0.5%;
+    width:50%;
+    border-radius: 10px;
+    border:1px solid grey;
+    margin: 0 5% 0 2%;
+}
+.ham{
+    display: none;
+    color:white;
+    font-size: 5vw;
+}
+@media screen and (max-width:970px) {
+    .profile img{
+       width:25%;
+    }
+    .details_container h1
+    {
+        font-size: 5vw;
+    }
+    .box1 h4,.box1 h3,.box1 p,.box2 h4,.box2 p {
+        font-size: 3vw!important;
+    }
+    .box2 input{
+        font-size: 1.7vw;
+    }
+    .box1 h3,.box2 input{
+        margin: 0 0 0 7%;
+    }
+}
+@media screen and (max-width:450px) {
+    .profile{
+        margin-top:15%;
+    }
+    .profile i{
+        font-size: 25vw;
+    }
+    .details_container h1
+    {
+        font-size:7vw;
+    }
+    .box1 h4,.box1 h3,.box1 p,.box2 h4,.box2 p {
+        font-size: 3.8vw!important;
+    }
+    .box2 input{
+        font-size: 2vw;
+    }
+}

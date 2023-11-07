@@ -1,0 +1,140 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Martian Mono', monospace;
+font-family: 'Mukta', sans-serif;
+}
+.main{
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+.main_container{
+flex: 1;
+}
+#wallet{
+margin: 5% 5% 0 5%;
+border: 2px solid grey;
+/* border-radius: 10px; */
+}
+#wallet h1{
+font-size: 3vw;
+padding-left:2% ;
+}
+.balance{
+display: flex;
+background-color: #bad79f;
+color: rgb(42, 75, 43);
+border: 1px solid rgb(42, 75, 43);
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+width: 18%;
+position: absolute;
+right:20%;
+}
+.balance h2{
+font-size: 1.8vw;
+margin:2%;
+padding:0;
+white-space: nowrap;
+text-align: center;
+}
+.wallet_container{
+display: flex;
+align-items: center;
+border-bottom: 1px solid grey;
+}
+#wallet a{
+text-decoration: none;
+position: absolute;
+right: 6%;
+background-color:rgb(42, 123, 230);
+width: 11.5%;
+margin: 2%;
+border-radius: 10px;
+color: white;
+white-space: nowrap;
+}
+
+#wallet a h2{
+font-size: 1.8vw;
+text-align: center;
+padding: 3%;
+}
+#wallet a:hover{
+opacity: 0.4;
+transition: 0.4s ease-in;
+}
+.box1{
+padding: 1.5%;
+display: flex;
+align-items: baseline;
+border-bottom: 1px solid grey;
+}
+.info h2{
+font-size: 2vw;
+}
+.info p{
+font-size: 1.3vw;
+}
+#amount{
+position: absolute;
+font-size: 2vw;
+right: 10%;
+}
+.credited-amount{
+color: green;
+}
+.debit-amount{
+color:red;
+}
+#pagination{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pagination a{
+    text-decoration: none;
+    cursor: pointer;
+    margin: 1%;
+    color:white;
+    background-color: #506730;
+    padding: 1%;
+    font-size: 1.4vw;
+    width: 4%;
+    text-align: center;
+    border-radius: 5px;
+}
+#pagination a:hover{
+ background-color:#253311;
+ transition: 0.4s ease-in;
+}
+#pagination a.active {
+    background-color:#253311;
+    transition: 0.4s ease-in;
+}
+@media screen and (max-width:750px)
+{
+.wallet_container h1{
+font-size: 5vw;
+}
+.balance h2{
+font-size: 2vw;
+}
+.balance{
+width: 25%;
+right: 25%;
+}
+#wallet a h2,.info p{
+font-size: 2vw;
+}
+#wallet a{
+width: 15%;
+}
+.info h2,#amount{
+font-size: 3vw;
+}
+}
